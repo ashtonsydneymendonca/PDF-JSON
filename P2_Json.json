@@ -1,0 +1,667 @@
+{
+  "presentation": [
+    {
+      "slideId": "p1-title",
+      "source_ids": ["p1"],
+      "description": {
+        "summary": "This is the title page for the Tata Motors Tax Transparency Report for the fiscal year 2024-25. It features the company branding and showcases key vehicle models.",
+        "central_idea": "To introduce the report, its subject (Tax Transparency), the company (Tata Motors), and the reporting period, setting a forward-looking tone with the tagline 'New Paths Newer Aspirations'.",
+        "crux": "Report Title Page."
+      },
+      "elements": [
+        {
+          "id": "p1-bg",
+          "type": "image",
+          "x": 0,
+          "y": 0,
+          "w": 1240,
+          "h": 1754,
+          "opacity": 1.0,
+          "styling": {
+            "backgroundColor": "#FFFFFF"
+          },
+          "imageUrl": "page_1_background_image.png"
+        },
+        {
+          "id": "p1-logo-tm",
+          "type": "text",
+          "x": 88,
+          "y": 59,
+          "w": 196,
+          "h": 26,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "TATA MOTORS",
+            "fontFamily": "Arial",
+            "fontSize": "20pt",
+            "fontWeight": "bold",
+            "color": "#003366"
+          }
+        },
+        {
+          "id": "p1-logo-t",
+          "type": "image",
+          "x": 780,
+          "y": 59,
+          "w": 125,
+          "h": 40,
+          "opacity": 1.0,
+          "styling": {},
+          "imageUrl": "tata_logo.png"
+        },
+        {
+          "id": "p1-rpttl",
+          "type": "text",
+          "x": 88,
+          "y": 109,
+          "w": 300,
+          "h": 50,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Tax Transparency Report\n2024-25",
+            "fontFamily": "Arial",
+            "fontSize": "16pt",
+            "lineHeight": 1.3,
+            "color": "#003366"
+          }
+        },
+        {
+          "id": "p1-slogan",
+          "type": "text",
+          "x": 464,
+          "y": 140,
+          "w": 650,
+          "h": 120,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "New Paths\nNewer Aspirations",
+            "fontFamily": "Arial",
+            "fontSize": "48pt",
+            "lineHeight": 1.2,
+            "color": "#00A7E1"
+          }
+        }
+      ]
+    },
+    {
+      "slideId": "p2-quote",
+      "source_ids": ["p2"],
+      "description": {
+        "summary": "This slide features a foundational quote from Tata's archives, stating that the community is the very purpose of a business's existence.",
+        "central_idea": "To communicate the core philosophy of community-centric purpose that guides Tata Motors' business and ethical framework, including its approach to tax.",
+        "crux": "Founding principle and corporate philosophy quote."
+      },
+      "elements": [
+        {
+          "id": "p2-img",
+          "type": "image",
+          "x": 140,
+          "y": 80,
+          "w": 960,
+          "h": 550,
+          "opacity": 1.0,
+          "styling": {},
+          "imageUrl": "page_2_historical_photo.png"
+        },
+        {
+          "id": "p2-credit",
+          "type": "text",
+          "x": 750,
+          "y": 580,
+          "w": 250,
+          "h": 20,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Courtesy Tata Central Archives",
+            "fontFamily": "Arial",
+            "fontSize": "10pt",
+            "color": "#333333"
+          }
+        },
+        {
+          "id": "p2-quote-bg",
+          "type": "image",
+          "x": 140,
+          "y": 630,
+          "w": 960,
+          "h": 300,
+          "opacity": 1.0,
+          "styling": {
+            "backgroundColor": "#E0F4FF",
+            "borderRadius": "10px"
+          }
+        },
+        {
+          "id": "p2-quote-txt",
+          "type": "text",
+          "x": 180,
+          "y": 700,
+          "w": 880,
+          "h": 160,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "In a free enterprise, the community\nis not just another stakeholder in\nbusiness, but is in fact the very purpose\nof its existence.",
+            "fontFamily": "Arial",
+            "fontSize": "26pt",
+            "lineHeight": 1.4,
+            "color": "#003366"
+          }
+        }
+      ]
+    },
+    {
+      "slideId": "p3-contents",
+      "source_ids": ["p3"],
+      "description": {
+        "summary": "This slide provides the table of contents for the Tax Transparency Report, listing all major sections and their corresponding page numbers.",
+        "central_idea": "To offer readers a clear overview of the report's structure and enable easy navigation to specific sections of interest.",
+        "crux": "Table of Contents."
+      },
+      "elements": [
+        {
+          "id": "p3-title",
+          "type": "text",
+          "x": 88,
+          "y": 90,
+          "w": 300,
+          "h": 50,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Contents",
+            "fontFamily": "Arial",
+            "fontSize": "40pt",
+            "fontWeight": "bold",
+            "color": "#003366"
+          }
+        },
+        {
+          "id": "p3-toc-list",
+          "type": "text",
+          "x": 88,
+          "y": 180,
+          "w": 500,
+          "h": 320,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Introduction                               2\nOur Approach to Tax                   3\nGlobal Tax &\nOther Contributions                   7\nBasis of Preparation                    9\nIndependent Reasonable\nAssurance Report                     13\nGlossary                                     15",
+            "fontFamily": "Arial",
+            "fontSize": "22pt",
+            "lineHeight": 1.8,
+            "color": "#333333"
+          }
+        },
+        {
+          "id": "p3-img-car",
+          "type": "image",
+          "x": 515,
+          "y": 90,
+          "w": 637,
+          "h": 366,
+          "opacity": 1.0,
+          "styling": {},
+          "imageUrl": "page_3_car_image.png"
+        },
+        {
+          "id": "p3-img-bldg",
+          "type": "image",
+          "x": 88,
+          "y": 480,
+          "w": 1064,
+          "h": 435,
+          "opacity": 1.0,
+          "styling": {},
+          "imageUrl": "page_3_building_image.png"
+        },
+        {
+          "id": "p3-footer",
+          "type": "text",
+          "x": 98,
+          "y": 948,
+          "w": 200,
+          "h": 40,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Tax Transparency Report\n2024-25",
+            "fontFamily": "Arial",
+            "fontSize": "10pt",
+            "color": "#003366"
+          }
+        },
+        {
+          "id": "p3-pg-num",
+          "type": "text",
+          "x": 870,
+          "y": 953,
+          "w": 20,
+          "h": 30,
+          "opacity": 1.0,
+          "styling": {
+            "backgroundColor": "#FFFFFF",
+            "padding": "5px"
+          },
+          "text": {
+            "content": "1",
+            "fontFamily": "Arial",
+            "fontSize": "12pt",
+            "color": "#003366"
+          }
+        }
+      ]
+    },
+    {
+      "slideId": "p4-intro",
+      "source_ids": ["p4"],
+      "description": {
+        "summary": "This slide introduces the report's purpose and provides a high-level summary of Tata Motors' Global Tax & Other Contributions for FY25 and FY24, including a revenue comparison and a categorical breakdown into Direct, Indirect, and Other contributions.",
+        "central_idea": "To establish the context of tax accountability and sustainability, and to present the top-line financial impact of tax contributions through clear year-on-year comparisons and percentage breakdowns.",
+        "crux": "Introduction and high-level tax contribution dashboard."
+      },
+      "elements": [
+        {
+          "id": "p4-title",
+          "type": "text",
+          "x": 88,
+          "y": 90,
+          "w": 300,
+          "h": 40,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Introduction",
+            "fontFamily": "Arial",
+            "fontSize": "24pt",
+            "fontWeight": "bold",
+            "color": "#003366"
+          }
+        },
+        {
+          "id": "p4-intro-txt",
+          "type": "text",
+          "x": 88,
+          "y": 140,
+          "w": 1064,
+          "h": 180,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "We recognize that the tax that we account for, and pay is an important aspect of our wider economic and social impact of the Tata Motors group. Tata Motors is always guided by the Tata Code of Conduct, hence accountability is rooted in all aspects of its decision. The focus is not only product sustainability but also operational sustainability with strong governance structure around all practices including tax. In recent years there has been a growing trend for corporates to share more details regarding their tax contributions. In keeping with the current trend and focus, Tata Motors presents its approach to tax related matters and its Global Tax & Other Contributions in this first tax Transparency Report thereby endorsing its commitment to tax accountability that in turn plays a key role in sustainability. This would also address the changing tax environment globally, requiring public disclosures of tax related parameters. The Tax Transparency Report is a voluntary disclosure to be read together with our Integrated Annual Report. Visit our website www.tatamotors.com to access the 80th Integrated Annual Report and learn more about our sustainability and business achievements.",
+            "fontFamily": "Arial",
+            "fontSize": "11pt",
+            "lineHeight": 1.4,
+            "color": "#333333"
+          }
+        },
+        {
+          "id": "p4-chart1",
+          "type": "image",
+          "x": 88,
+          "y": 340,
+          "w": 1064,
+          "h": 150,
+          "opacity": 1.0,
+          "styling": {},
+          "chartData": {
+            "chartType": "bar",
+            "title": "Global Tax & Other Contributions Summary (₹ crore)",
+            "series": [
+              {
+                "name": "Revenue",
+                "color": "#00A7E1",
+                "data": { "FY25": 439695, "FY24": 434016 }
+              },
+              {
+                "name": "Global Tax & Other Contributions",
+                "color": "#FF8C00",
+                "data": { "FY25": 38892, "FY24": 39344 }
+              },
+              {
+                "name": "Share of Global Tax & Other Contributions to Revenue",
+                "color": "#4CAF50",
+                "data": { "FY25": "9%", "FY24": "9%" }
+              }
+            ]
+          }
+        },
+        {
+          "id": "p4-chart2",
+          "type": "image",
+          "x": 88,
+          "y": 520,
+          "w": 1064,
+          "h": 400,
+          "opacity": 1.0,
+          "styling": {},
+          "chartData": {
+            "chartType": "donut",
+            "title": "Category wise Summary (₹ crore)",
+            "series": [
+              {
+                "name": "FY25",
+                "data": [
+                  { "category": "Direct Contributions", "value": 25766, "percentage": 66.25, "color": "#0072B2" },
+                  { "category": "Indirect Contributions", "value": 12189, "percentage": 31.34, "color": "#E69F00" },
+                  { "category": "Other Contributions", "value": 937, "percentage": 2.41, "color": "#56B4E9" }
+                ]
+              },
+              {
+                "name": "FY24",
+                "data": [
+                  { "category": "Direct Contributions", "value": 29199, "percentage": 74.21, "color": "#0072B2" },
+                  { "category": "Indirect Contributions", "value": 9284, "percentage": 23.60, "color": "#E69F00" },
+                  { "category": "Other Contributions", "value": 861, "percentage": 2.19, "color": "#56B4E9" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "p4-img",
+          "type": "image",
+          "x": 88,
+          "y": 800,
+          "w": 1064,
+          "h": 320,
+          "opacity": 1.0,
+          "styling": {},
+          "imageUrl": "page_4_image.png"
+        }
+      ]
+    },
+    {
+      "slideId": "p10-contrib",
+      "source_ids": ["p10"],
+      "description": {
+        "summary": "This slide presents a detailed breakdown of Global Tax and Other Contributions for FY25 and FY24. It shows the total contributions and segments them into Direct, Indirect, and Other categories. Furthermore, it breaks down these contributions by business units: Tata Commercial and Passenger Vehicle, Other business, and Jaguar Land Rover.",
+        "central_idea": "To provide a granular, quantitative analysis of the company's financial contributions to governments, highlighting the scale and composition of these payments across different fiscal years and major business divisions.",
+        "crux": "Detailed financial breakdown of tax contributions by category and business unit."
+      },
+      "elements": [
+        {
+          "id": "p10-fy25ttl",
+          "type": "text",
+          "x": 300,
+          "y": 90,
+          "w": 640,
+          "h": 30,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Global Tax and Other Contributions FY25",
+            "fontFamily": "Arial",
+            "fontSize": "16pt",
+            "fontWeight": "bold",
+            "color": "#003366",
+            "textAlign": "center"
+          }
+        },
+        {
+          "id": "p10-fy25tot",
+          "type": "text",
+          "x": 420,
+          "y": 130,
+          "w": 400,
+          "h": 50,
+          "opacity": 1.0,
+          "styling": { "border": "1px solid #CCCCCC", "borderRadius": "8px", "padding": "10px" },
+          "text": {
+            "content": "₹ 38,892 crore\nTotal Contributions",
+            "fontFamily": "Arial",
+            "fontSize": "20pt",
+            "fontWeight": "bold",
+            "lineHeight": 1.3,
+            "textAlign": "center",
+            "color": "#333333"
+          }
+        },
+        {
+          "id": "p10-fy25kpi",
+          "type": "image",
+          "x": 90,
+          "y": 200,
+          "w": 1060,
+          "h": 100,
+          "opacity": 1.0,
+          "styling": {},
+          "kpiData": [
+            { "id": "dirc25", "label": "Direct Contributions", "value": "₹ 25,766 crore" },
+            { "id": "indc25", "label": "Indirect Contributions", "value": "₹ 12,189 crore" },
+            { "id": "othc25", "label": "Other Contributions", "value": "₹ 937 crore" }
+          ]
+        },
+        {
+          "id": "p10-fy25brk",
+          "type": "image",
+          "x": 90,
+          "y": 320,
+          "w": 1060,
+          "h": 200,
+          "opacity": 1.0,
+          "styling": {},
+          "chartData": {
+            "chartType": "horizontal_stacked_bar",
+            "title": "FY25 Contribution Breakdown by Business (₹ crore)",
+            "categories": ["Tata Commercial and Passenger Vehicle", "Other business", "Jaguar Land Rover"],
+            "series": [
+              { "name": "Direct", "data": [9541, 846, 15379], "color": "#00A7E1" },
+              { "name": "Indirect", "data": [3552, 618, 8019], "color": "#4CAF50" },
+              { "name": "Others", "data": [299, 108, 530], "color": "#FF8C00" }
+            ]
+          }
+        },
+        {
+          "id": "p10-fy24ttl",
+          "type": "text",
+          "x": 300,
+          "y": 550,
+          "w": 640,
+          "h": 30,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Global Tax and Other Contributions FY24",
+            "fontFamily": "Arial",
+            "fontSize": "16pt",
+            "fontWeight": "bold",
+            "color": "#003366",
+            "textAlign": "center"
+          }
+        },
+        {
+          "id": "p10-fy24tot",
+          "type": "text",
+          "x": 420,
+          "y": 590,
+          "w": 400,
+          "h": 50,
+          "opacity": 1.0,
+          "styling": { "border": "1px solid #CCCCCC", "borderRadius": "8px", "padding": "10px" },
+          "text": {
+            "content": "₹ 39,344 crore\nTotal Contributions",
+            "fontFamily": "Arial",
+            "fontSize": "20pt",
+            "fontWeight": "bold",
+            "lineHeight": 1.3,
+            "textAlign": "center",
+            "color": "#333333"
+          }
+        },
+        {
+          "id": "p10-fy24kpi",
+          "type": "image",
+          "x": 90,
+          "y": 660,
+          "w": 1060,
+          "h": 100,
+          "opacity": 1.0,
+          "styling": {},
+          "kpiData": [
+            { "id": "dirc24", "label": "Direct Contributions", "value": "₹ 29,199 crore" },
+            { "id": "indc24", "label": "Indirect Contributions", "value": "₹ 9,284 crore" },
+            { "id": "othc24", "label": "Other Contributions", "value": "₹ 861 crore" }
+          ]
+        },
+        {
+          "id": "p10-fy24brk",
+          "type": "image",
+          "x": 90,
+          "y": 780,
+          "w": 1060,
+          "h": 200,
+          "opacity": 1.0,
+          "styling": {},
+          "chartData": {
+            "chartType": "horizontal_stacked_bar",
+            "title": "FY24 Contribution Breakdown by Business (₹ crore)",
+            "categories": ["Tata Commercial and Passenger Vehicle", "Other business", "Jaguar Land Rover"],
+            "series": [
+              { "name": "Direct", "data": [9465, 389, 19345], "color": "#00A7E1" },
+              { "name": "Indirect", "data": [2519, 349, 6416], "color": "#4CAF50" },
+              { "name": "Others", "data": [317, 46, 498], "color": "#FF8C00" }
+            ]
+          }
+        },
+        {
+          "id": "p10-footer",
+          "type": "text",
+          "x": 90,
+          "y": 1000,
+          "w": 200,
+          "h": 20,
+          "opacity": 1.0,
+          "styling": {},
+          "text": { "content": "* refer Entity Schedule", "fontFamily": "Arial", "fontSize": "9pt", "color": "#555555" }
+        }
+      ]
+    },
+    {
+      "slideId": "p13-ent-sch",
+      "source_ids": ["p13", "p14"],
+      "description": {
+        "summary": "This slide provides a comprehensive schedule of all entities consolidated in this report. It lists companies under the segments: Tata Motors Commercial and Passenger Vehicles, Jaguar Land Rover, and Other business, along with their respective countries of operation.",
+        "central_idea": "To ensure full transparency by disclosing the specific legal entities that constitute the Tata Motors group for the purpose of this Tax Transparency Report.",
+        "crux": "Schedule of Group Entities."
+      },
+      "elements": [
+        {
+          "id": "p13-title",
+          "type": "text",
+          "x": 88,
+          "y": 90,
+          "w": 300,
+          "h": 40,
+          "opacity": 1.0,
+          "styling": {},
+          "text": {
+            "content": "Entity Schedule",
+            "fontFamily": "Arial",
+            "fontSize": "24pt",
+            "fontWeight": "bold",
+            "color": "#003366"
+          }
+        },
+        {
+          "id": "p13-tbl1",
+          "type": "image",
+          "x": 88,
+          "y": 140,
+          "w": 520,
+          "h": 1400,
+          "opacity": 1.0,
+          "styling": {},
+          "tableData": {
+            "title": "Tata Motors Commercial and Passenger Vehicles",
+            "headers": ["SI. No.", "Name of the company", "Country"],
+            "rows": [
+              ["1", "Tata Motors Limited", "India"],
+              ["2", "Brabo Robotics And Automation Limited", "India"],
+              ["3", "Fiat India Automobiles Private Limited", "India"],
+              ["4", "PT. Tata Motors Distribusi Indonesia", "Indonesia"],
+              ["5", "PT. Tata Motors Indonesia", "Indonesia"],
+              ["6", "Tata Cummins Private Limited", "India"],
+              ["7", "TCPL Green Energy Solutions", "India"],
+              ["8", "Tata Daewoo Mobility Company Limited", "South Korea"],
+              ["9", "Tata Daewoo Mobility Sales Company Limited", "South Korea"],
+              ["10", "Tata Hispano Motors Carrocera S.A", "Spain"],
+              ["11", "Tata Hispano Motors Carroceries Maghreb S.A", "Morroco"],
+              ["12", "Tata Motors (Thailand) Limited", "Thailand"],
+              ["13", "Tata Motors Body Solutions Limited", "India"],
+              ["14", "Tata Motors Design Tech Centre plc", "UK"],
+              ["15", "Tata Motors Design Tech Centre plc (Indian PE)", "India"],
+              ["16", "Tata Motors Global Services Limited", "India"],
+              ["17", "Tata Motors Limited (Bangladesh Branch)", "Bangladesh"],
+              ["18", "Tata Motors Limited (China Representative office)", "China"],
+              ["19", "Tata Motors Limited (Dubai Liaison office)", "Dubai"],
+              ["20", "Tata Motors Limited (Kenya Branch)", "Kenya"],
+              ["21", "Tata Motors Limited (Spain Branch)", "Spain"],
+              ["22", "Tata Motors Passenger Vehicles Limited", "India"],
+              ["23", "Tata Passenger Electric Mobility Limited", "India"],
+              ["24", "Tata Precision Industries Pte. Limited", "Singapore"],
+              ["25", "TMF Business Services Limited", "India"],
+              ["26", "TMF Holdings Limited", "India"],
+              ["27", "TML CV Mobility Solutions Limited", "India"],
+              ["28", "TML Holdings Pte. Limited", "Singapore"],
+              ["29", "TML Smart City Mobility Solutions (J&K) Private Limited", "India"],
+              ["30", "TML Smart City Mobility Solutions Limited", "India"],
+              ["31", "Trilix S.r.l", "Italy"],
+              ["32", "Tata Motors Finance Limited*", "India"]
+            ]
+          }
+        },
+        {
+          "id": "p13-tbl2",
+          "type": "image",
+          "x": 632,
+          "y": 140,
+          "w": 520,
+          "h": 1400,
+          "opacity": 1.0,
+          "styling": {},
+          "tableData": {
+            "title": "Jaguar Land Rover",
+            "headers": ["SI. No.", "Name of the company", "Country"],
+            "rows": [
+              ["1", "Bowler Motors Limited", "UK"],
+              ["2", "Daimler Transport Vehicles Limited", "UK"],
+              ["3", "In-car Ventures Limited", "UK"],
+              ["4", "InMotion Ventures 2 Limited", "UK"],
+              ["5", "InMotion Ventures 3 Limited", "UK"],
+              ["6", "InMotion Ventures Limited", "UK"],
+              ["7", "Jaguar Cars Limited", "UK"],
+              ["8", "Jaguar Cars South Africa (Pty) Limited", "South Africa"],
+              ["9", "Jaguar e Land Rover Brasil Indústria e Comércio de Veículos LTDA", "Brazil"],
+              ["10", "Jaguar Land Rover (China) Investment Co. Limited", "China"],
+              ["11", "Jaguar Land Rover (Ningbo) Trading Co. Limited", "China"],
+              ["12", "Jaguar Land Rover (South Africa) (Pty) Limited", "South Africa"],
+              ["13", "Jaguar Land Rover (South Africa) Holdings Limited", "South Africa"],
+              ["14", "Jaguar Land Rover Australia (Pty) Limited", "Australia"],
+              ["15", "Jaguar Land Rover Austria GmbH", "Austria"],
+              ["16", "Jaguar Land Rover Automotive Plc", "UK"],
+              ["17", "Jaguar Land Rover Belux N.V.", "Belgium"],
+              ["18", "Jaguar Land Rover Canada ULC", "Canada"],
+              ["19", "Jaguar Land Rover Classic Deutschland GmbH", "Germany"],
+              ["20", "Jaguar Land Rover Classic USA LLC", "USA"],
+              ["21", "Jaguar Land Rover Colombia S.A.S", "Colombia"],
+              ["22", "Jaguar Land Rover Deutschland GmbH", "Germany"],
+              ["23", "Jaguar Land Rover Espana SL", "Spain"],
+              ["24", "Jaguar Land Rover France S.A.S", "France"],
+              ["25", "Jaguar Land Rover Holdings Limited", "UK"],
+              ["26", "Jaguar Land Rover Hungary KFT", "Hungary"],
+              ["27", "Jaguar Land Rover India Limited", "India"],
+              ["28", "Jaguar Land Rover Ireland (Services) Limited", "Ireland"],
+              ["29", "Jaguar Land Rover Italia S.p.A", "Italy"],
+              ["30", "Jaguar Land Rover Japan Limited", "Japan"]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
