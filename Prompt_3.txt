@@ -31,6 +31,9 @@ status: Set to "success" if data was fully extracted, "partial" if there are unc
 confidence: Your confidence score (0.0 to 1.0) in the accuracy of the extracted data.
 error: A brief explanation if the status is "failed" (e.g., "3D pie chart not supported").
 The chartData or tableData object should only be included if the status is "success" or "partial".
+Additonal additions:
+1)If textual data is embedded in images (e.g., scanned PDFs or charts with embedded numbers), apply OCR and attempt structured text recovery. Flag any OCR-recovered text with a `"source": "ocr"` field inside the `dataExtraction` object.
+
 FINAL JSON STRUCTURE:
 The final output must be a single JSON object with the root key presentation. This object contains metadata, styleguide, and a list of slides.
 
