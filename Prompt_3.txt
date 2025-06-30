@@ -33,7 +33,11 @@ error: A brief explanation if the status is "failed" (e.g., "3D pie chart not su
 The chartData or tableData object should only be included if the status is "success" or "partial".
 Additonal additions:
 1)If textual data is embedded in images (e.g., scanned PDFs or charts with embedded numbers), apply OCR and attempt structured text recovery. Flag any OCR-recovered text with a `"source": "ocr"` field inside the `dataExtraction` object.
-
+2)When structuring text, infer hierarchy (e.g., main heading, subheading, footnotes) and apply custom styleguide classes (e.g., "subTitle", "noteText") accordingly. Prioritize semantic relevance, not just font size.
+3)For grouped visuals (e.g., multiple charts/tables on a single slide), ensure each is extracted separately and given a unique element ID and imageUrl. Maintain visual order (top-to-bottom, left-to-right) unless semantic grouping is evident.
+4)Normalize all financial figures in extracted text and charts. For example, convert "$5.2 billion" → "$5200M" and explicitly note the unit in the `chartData`, `tableData`, or `content` as appropriate.
+5)Try to identify the chart type (bar, line, pie, etc.) and include `chartType` explicitly. If inference is uncertain, add `chartType: "unknown"` and provide reasoning in the dataExtraction.error field.
+6)Add a `tags` array at the slide level for quick search and indexing (e.g., ["kpi", "growth", "profitability"]). These are based on insights, not just keywords.
 FINAL JSON STRUCTURE:
 The final output must be a single JSON object with the root key presentation. This object contains metadata, styleguide, and a list of slides.
 
