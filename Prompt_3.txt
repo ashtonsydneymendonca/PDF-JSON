@@ -92,8 +92,36 @@ Sample Json structure to be used as reference
       {
         "slideId": "s01_title",
         "description": {
+          "slideType": "title",
+          "objective": "Introduce the quarterly and annual financial results presentation and set professional tone for stakeholder communication",
+          "keyMessages": [
+            "Presenting comprehensive Q4 and FY2025 financial performance results",
+            "Demonstrating Global Tech Inc.'s continued growth trajectory and market position",
+            "Providing transparency to investors and stakeholders on operational achievements"
+          ],
           "summary": "This is the main title slide for the Q4 and Full Year 2025 financial results presentation for Global Tech Inc.",
-          "insight": "The presentation will detail a period of significant growth and strategic execution for the company."
+          "insights": [
+            {
+              "category": "Context",
+              "text": "The presentation will detail a period of significant growth and strategic execution for the company"
+            },
+            {
+              "category": "Positioning",
+              "text": "Sets expectation for positive financial narrative and operational excellence"
+            }
+          ],
+          "speakerNotes": [
+            "Welcome audience and introduce the reporting period",
+            "Emphasize commitment to transparency and regular stakeholder communication",
+            "Build anticipation for strong performance metrics to be shared"
+          ],
+          "context": {
+            "audienceLevel": "executive",
+            "presentationFlow": "opening slide, sets stage for entire presentation",
+            "timeAllocation": "30 seconds",
+            "followUpSlides": ["financial highlights", "detailed metrics"]
+          },
+          "callToAction": "Prepare stakeholders for comprehensive review of strong financial performance and strategic progress"
         },
         "elements": [
           {
@@ -141,8 +169,41 @@ Sample Json structure to be used as reference
       {
         "slideId": "s02_kpis",
         "description": {
+          "slideType": "dashboard",
+          "objective": "Present key financial performance metrics to demonstrate strong operational execution and growth trajectory",
+          "keyMessages": [
+            "Revenue growth of 15% demonstrates successful market expansion and customer acquisition",
+            "Net profit growth of 22% shows operational efficiency gains and margin improvement",
+            "Strong financial foundation positions company for continued investment and growth initiatives"
+          ],
           "summary": "This slide provides a high-level dashboard of Key Performance Indicators (KPIs) for the full fiscal year.",
-          "insight": "The company shows strong, double-digit YoY growth across revenue and profit, coupled with significant margin expansion, indicating operational efficiency."
+          "insights": [
+            {
+              "category": "Performance",
+              "text": "Double-digit YoY growth across revenue and profit indicates strong market position and execution excellence"
+            },
+            {
+              "category": "Efficiency",
+              "text": "Margin expansion coupled with revenue growth demonstrates operational leverage and disciplined cost management"
+            },
+            {
+              "category": "Momentum",
+              "text": "Accelerating profit growth outpacing revenue growth signals improving operational maturity"
+            }
+          ],
+          "speakerNotes": [
+            "Emphasize the consistency of growth across multiple quarters leading to these annual results",
+            "Highlight margin expansion as evidence of operational maturity and scalability",
+            "Connect performance to strategic initiatives launched in prior year",
+            "Position results as validation of management strategy and execution capability"
+          ],
+          "context": {
+            "audienceLevel": "executive",
+            "presentationFlow": "second slide after title, establishes overall performance narrative",
+            "timeAllocation": "2-3 minutes",
+            "followUpSlides": ["quarterly trends", "segment breakdown", "detailed analysis"]
+          },
+          "callToAction": "These strong fundamentals support our continued investment in growth initiatives while maintaining disciplined capital allocation and shareholder value creation"
         },
         "elements": [
           {
@@ -194,8 +255,41 @@ Sample Json structure to be used as reference
       {
         "slideId": "s03_chart",
         "description": {
+          "slideType": "chart",
+          "objective": "Demonstrate consistent quarterly revenue growth trajectory and build confidence in business momentum",
+          "keyMessages": [
+            "Sustained revenue growth across 8 consecutive quarters shows business resilience",
+            "Q4 2025 represents strongest quarterly performance with $1.42B in revenue",
+            "Growth acceleration pattern indicates successful execution of strategic initiatives"
+          ],
           "summary": "This slide visualizes the quarterly revenue trend over the last two fiscal years, showing growth.",
-          "insight": "Revenue growth is accelerating, with Q4 showing the strongest performance, suggesting strong market momentum heading into the next fiscal year."
+          "insights": [
+            {
+              "category": "Trend Analysis",
+              "text": "Revenue growth is accelerating, with Q4 showing the strongest performance, suggesting strong market momentum heading into the next fiscal year"
+            },
+            {
+              "category": "Seasonality",
+              "text": "Q4 traditionally represents peak performance period, and 2025 results exceeded historical patterns"
+            },
+            {
+              "category": "Predictability",
+              "text": "Consistent upward trajectory demonstrates business model stability and market demand strength"
+            }
+          ],
+          "speakerNotes": [
+            "Point out the consistent upward trend with minimal volatility",
+            "Highlight Q4 2025 as record quarterly performance",
+            "Draw attention to acceleration in growth rate during second half of fiscal year",
+            "Connect revenue trends to specific business initiatives or market conditions"
+          ],
+          "context": {
+            "audienceLevel": "executive",
+            "presentationFlow": "follows KPI overview, provides detailed trend analysis",
+            "timeAllocation": "3-4 minutes",
+            "followUpSlides": ["segment analysis", "market dynamics", "forward guidance"]
+          },
+          "callToAction": "This momentum positions us well for FY2026 planning and continued market share expansion"
         },
         "elements": [
           {
@@ -235,8 +329,41 @@ Sample Json structure to be used as reference
       {
         "slideId": "s04_fail",
         "description": {
+          "slideType": "complex_visual",
+          "objective": "Present market share analysis across regional segments with acknowledgment of data complexity",
+          "keyMessages": [
+            "North America remains our strongest regional market position",
+            "Complex multi-dimensional market analysis requires further detailed review",
+            "Regional strategy effectiveness varies by market maturity and competitive landscape"
+          ],
           "summary": "This slide presents a complex, non-standard visualization of regional market share.",
-          "insight": "While the visual indicates a strong position in North America, the precise data is unclear, warranting a follow-up with a standard chart."
+          "insights": [
+            {
+              "category": "Regional Performance",
+              "text": "While the visual indicates a strong position in North America, the precise data is unclear, warranting a follow-up with a standard chart"
+            },
+            {
+              "category": "Data Complexity",
+              "text": "Multi-dimensional market share analysis reveals need for simplified reporting format for executive review"
+            },
+            {
+              "category": "Action Required",
+              "text": "Recommend follow-up session with standard reporting format to ensure clear strategic decision-making"
+            }
+          ],
+          "speakerNotes": [
+            "Acknowledge the complexity of the visualization and its limitations for this audience",
+            "Emphasize commitment to data-driven decision making with clear, actionable insights",
+            "Propose follow-up with simplified charts for detailed discussion",
+            "Maintain focus on North American market strength as key takeaway"
+          ],
+          "context": {
+            "audienceLevel": "executive",
+            "presentationFlow": "supports broader market analysis, may require skip or brief mention",
+            "timeAllocation": "1-2 minutes or skip",
+            "followUpSlides": ["segment breakdown", "action items"]
+          },
+          "callToAction": "Schedule detailed market share review session with simplified reporting format for strategic planning purposes"
         },
         "elements": [
            {
@@ -264,8 +391,41 @@ Sample Json structure to be used as reference
       {
         "slideId": "s05_table",
         "description": {
+          "slideType": "data_table",
+          "objective": "Provide detailed segment-level revenue analysis to identify growth drivers and strategic opportunities",
+          "keyMessages": [
+            "Cloud Services leads growth at 38.5% YoY, establishing it as primary expansion engine",
+            "Enterprise Solutions shows strong 19% growth, indicating successful market penetration",
+            "Consumer Products growth of 2.9% suggests mature market requiring strategic review"
+          ],
           "summary": "This slide presents a detailed breakdown of revenue by business segment for FY2025 compared to the prior year.",
-          "insight": "The Cloud Services segment is the primary growth engine, expanding by nearly 40% YoY and significantly outpacing other segments."
+          "insights": [
+            {
+              "category": "Growth Driver",
+              "text": "The Cloud Services segment is the primary growth engine, expanding by nearly 40% YoY and significantly outpacing other segments"
+            },
+            {
+              "category": "Portfolio Balance",
+              "text": "Enterprise Solutions continues steady double-digit growth, providing stable foundation for overall performance"
+            },
+            {
+              "category": "Strategic Focus",
+              "text": "Consumer Products segment showing maturity signals need for innovation or market expansion strategies"
+            }
+          ],
+          "speakerNotes": [
+            "Emphasize Cloud Services as the standout performer and future growth catalyst",
+            "Highlight Enterprise Solutions as providing stability and consistent performance",
+            "Address Consumer Products performance with strategic context about market maturity",
+            "Connect segment performance to overall company strategic priorities and resource allocation"
+          ],
+          "context": {
+            "audienceLevel": "executive",
+            "presentationFlow": "provides detailed breakdown following high-level metrics",
+            "timeAllocation": "4-5 minutes",
+            "followUpSlides": ["strategic initiatives", "resource allocation", "forward outlook"]
+          },
+          "callToAction": "Prioritize continued investment in Cloud Services expansion while developing strategic refresh for Consumer Products segment"
         },
         "elements": [
           {
