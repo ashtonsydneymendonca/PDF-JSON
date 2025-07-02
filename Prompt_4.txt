@@ -63,6 +63,66 @@ Additonal additions:
 FINAL JSON STRUCTURE:
 The final output must be a single JSON object with the root key presentation. This object contains metadata, styleguide, and a list of slides.
 
+ENHANCED ELEMENT PROPERTIES:
+Each element MUST include these additional properties:
+
+zIndex: Integer (1-100) - layering priority (text=50, images=10, backgrounds=1)
+visibility: Object containing:
+  - minFontSize: Minimum readable font size (default: 12pt)
+  - contrastRatio: Minimum 4.5:1 against background
+  - textShadow: Add if text over images (e.g., "1px 1px 2px rgba(0,0,0,0.8)")
+
+layout: Object containing:
+  - gridPosition: "top-left", "top-center", "middle-left", etc.
+  - spacing: Object with {top: 20, right: 20, bottom: 20, left: 20}
+  - alignment: "left", "center", "right", "justify"
+
+ENHANCED TEXT ELEMENT RULES:
+- maxWidth: Calculate based on slide width minus margins (typically slideWidth - 200px)
+- wordWrap: Always set to "break-word" 
+- lineClamp: Maximum number of lines before truncation
+- responsive: Object containing font size adjustments for different content lengths
+  - short (<50 chars): increase fontSize by 10%
+  - medium (50-150 chars): use standard fontSize  
+  - long (>150 chars): decrease fontSize by 15%
+
+TITLE HIERARCHY SPACING:
+- Main titles (H1): 80px top margin, 40px bottom margin
+- Section titles (H2): 60px top margin, 30px bottom margin  
+- Subsections (H3): 40px top margin, 20px bottom margin
+
+ENHANCED IMAGE ELEMENT RULES:
+- aspectRatio: Maintain original ratio, specify as "16:9", "4:3", etc.
+- maxDimensions: Never exceed 70% of slide width or height
+- positioning: Object containing:
+  - anchor: "top-left", "center", etc.
+  - offset: {x: 0, y: 0} for fine-tuning
+- textWrap: "none", "left", "right" - how text flows around image
+- caption: Object for image descriptions/titles positioned below image
+
+MANDATORY VALIDATION CHECKS:
+Before outputting JSON, verify:
+
+1. NO OVERLAPPING ELEMENTS:
+   - Calculate bounding box for each element: (x, y, x+w, y+h)
+   - Ensure minimum spacing between all elements
+   - Flag any violations with "layoutError" property
+
+2. READABILITY COMPLIANCE:
+   - All text fontSize >= 12pt
+   - Sufficient color contrast (dark text on light background or vice versa)
+   - Text width < 80% of slide width for readability
+
+3. SLIDE BOUNDARIES:
+   - No element extends beyond slide dimensions (typically 1920x1080)
+   - All elements have positive coordinates
+   - Maintain minimum 50px margin from slide edges
+
+4. CONTENT HIERARCHY:
+   - Only one main title (H1) per slide
+   - Logical font size progression (titles > subtitles > body text)
+   - Consistent styling within element types
+
 Sample Json structure to be used as reference
 {
   "presentation": {
