@@ -9,6 +9,8 @@ For each slide in the PDF:
 Assign a unique, descriptive slideId (max 10 characters).
 Write a description object summarizing the content. Instead of a 'crux', provide an insight field: a single sentence explaining the key financial takeaway or business implication of the slide.
 Focus on financial metrics, KPIs, trends, and data insights.
+Add a tags array at the slide level for quick search and indexing (e.g., ["kpi", "growth", "profitability"]).
+These are based on insights, not just keywords.
 STEP 3: SLIDE ELEMENT STRUCTURING
 Interpret and structure all elements on the slide. Each element must be a JSON object with the following properties:
 MANDATORY PROPERTIES FOR ALL ELEMENTS:
@@ -65,26 +67,27 @@ The final output must be a single JSON object with the root key presentation. Th
 
 ENHANCED ELEMENT PROPERTIES:
 Each element MUST include these additional properties:
-
 zIndex: Integer (1-100) - layering priority (text=50, images=10, backgrounds=1)
-visibility: Object containing:
-  - minFontSize: Minimum readable font size (default: 12pt)
-  - contrastRatio: Minimum 4.5:1 against background
-  - textShadow: Add if text over images (e.g., "1px 1px 2px rgba(0,0,0,0.8)")
-
 layout: Object containing:
-  - gridPosition: "top-left", "top-center", "middle-left", etc.
-  - spacing: Object with {top: 20, right: 20, bottom: 20, left: 20}
+  - gridPosition: "top-left", "top-center", "middle-left", "middle-center", "middle-right", "bottom-left", etc.
+  - spacing: Object with {top: 20, right: 20, bottom: 20, left: 20} (minimum pixel spacing)
   - alignment: "left", "center", "right", "justify"
+visibility: Object containing:
+  - minFontSize: Minimum readable font size (default: "12pt", null for images)
+  - contrastRatio: Minimum 4.5:1 against background (null for images)
+  - textShadow: Add if text over images, e.g., "1px 1px 2px rgba(0,0,0,0.8)" (null if not needed)
+validation: Object containing:
+  - layoutError: null or description of spacing/overlap issues
+  - readabilityScore: 0.0 to 1.0 confidence in element readability (null for images)
 
 ENHANCED TEXT ELEMENT RULES:
 - maxWidth: Calculate based on slide width minus margins (typically slideWidth - 200px)
 - wordWrap: Always set to "break-word" 
-- lineClamp: Maximum number of lines before truncation
-- responsive: Object containing font size adjustments for different content lengths
-  - short (<50 chars): increase fontSize by 10%
-  - medium (50-150 chars): use standard fontSize  
-  - long (>150 chars): decrease fontSize by 15%
+- lineClamp: Maximum number of lines before truncation (1 for titles, 2-3 for body text)
+- responsive: Object containing font size adjustments:
+  - short (<50 chars): {"fontSizeMultiplier": 1.1}
+  - medium (50-150 chars): {"fontSizeMultiplier": 1.0}  
+  - long (>150 chars): {"fontSizeMultiplier": 0.85}
 
 TITLE HIERARCHY SPACING:
 - Main titles (H1): 80px top margin, 40px bottom margin
@@ -92,13 +95,13 @@ TITLE HIERARCHY SPACING:
 - Subsections (H3): 40px top margin, 20px bottom margin
 
 ENHANCED IMAGE ELEMENT RULES:
-- aspectRatio: Maintain original ratio, specify as "16:9", "4:3", etc.
-- maxDimensions: Never exceed 70% of slide width or height
+- aspectRatio: Maintain original ratio, specify as "16:9", "4:3", "2:1", etc.
+- maxDimensions: Object with {"width": "70%", "height": "60%"} of slide dimensions
 - positioning: Object containing:
-  - anchor: "top-left", "center", etc.
-  - offset: {x: 0, y: 0} for fine-tuning
+  - anchor: "top-left", "center", "top-center", etc.
+  - offset: {"x": 0, "y": 0} for fine-tuning position
 - textWrap: "none", "left", "right" - how text flows around image
-- caption: Object for image descriptions/titles positioned below image
+- caption: Object for image descriptions/titles positioned below image (null if none)`
 
 MANDATORY VALIDATION CHECKS:
 Before outputting JSON, verify:
@@ -131,6 +134,12 @@ Sample Json structure to be used as reference
       "company": "Global Tech Inc.",
       "reportingPeriod": "Q4 & Full Year 2025",
       "generatedAt": "2023-10-27T10:00:00Z"
+      "canvasDimensions": {
+        "width": 1920,
+        "height": 1080,
+        "gridSize": 50,
+        "margins": {"top": 50, "right": 50, "bottom": 50, "left": 50}
+      }
     },
     "styleguide": {
       "classes": {
@@ -207,45 +216,114 @@ Sample Json structure to be used as reference
         },
         "elements": [
           {
-            "id": "s1-logo",
-            "type": "image",
-            "x": 100,
-            "y": 80,
-            "w": 180,
-            "h": 45,
-            "opacity": 1.0,
-            "imageUrl": "s1-logo.png",
-            "styling": {}
+          "id": "s1-logo",
+          "type": "image",
+          "x": 100,
+          "y": 80,
+          "w": 180,
+          "h": 45,
+          "zIndex": 10,
+          "opacity": 1.0,
+          "imageUrl": "s1-logo.png",
+          "aspectRatio": "4:1",
+          "maxDimensions": {"width": "30%", "height": "10%"},
+          "positioning": {
+            "anchor": "top-left",
+            "offset": {"x": 0, "y": 0}
           },
-          {
-            "id": "s1-title",
-            "type": "text",
-            "content": "Q4 & Full Year 2025 Financial Results",
-            "x": 100,
-            "y": 450,
-            "w": 1200,
-            "h": 100,
-            "opacity": 1.0,
-            "class": "pageTitle",
-            "styling": {
-              "fontSize": "54pt"
-            }
+          "textWrap": "none",
+          "caption": null,
+          "layout": {
+            "gridPosition": "top-left",
+            "spacing": {"top": 30, "right": 20, "bottom": 20, "left": 50},
+            "alignment": "left"
           },
+          "visibility": {
+            "minFontSize": null,
+            "contrastRatio": null,
+            "textShadow": null
+          },
+          "validation": {
+            "layoutError": null,
+            "readabilityScore": null
+          },
+          "styling": {}
+        },
           {
-            "id": "s1-date",
-            "type": "text",
-            "content": "October 27, 2025",
-            "x": 100,
-            "y": 560,
-            "w": 800,
-            "h": 50,
-            "opacity": 1.0,
-            "styling": {
-              "fontFamily": "Inter, Arial, sans-serif",
-              "fontSize": "24pt",
-              "color": "#5A6878"
-            }
+        "id": "s1-title",
+        "type": "text",
+        "content": "Q4 & Full Year 2025 Financial Results",
+        "x": 100,
+        "y": 450,
+        "w": 1200,
+        "h": 100,
+        "zIndex": 50,
+        "opacity": 1.0,
+        "class": "pageTitle",
+        "maxWidth": 1720,
+        "wordWrap": "break-word",
+        "lineClamp": 2,
+        "responsive": {
+          "short": {"fontSizeMultiplier": 1.1},
+          "medium": {"fontSizeMultiplier": 1.0},
+          "long": {"fontSizeMultiplier": 0.85}
+        },
+        "layout": {
+          "gridPosition": "middle-left",
+          "spacing": {"top": 80, "right": 20, "bottom": 40, "left": 50},
+          "alignment": "left"
+        },
+        "visibility": {
+          "minFontSize": "32pt",
+          "contrastRatio": 7.2,
+          "textShadow": null
+        },
+        "validation": {
+          "layoutError": null,
+          "readabilityScore": 0.98
+        },
+        "styling": {
+          "fontSize": "54pt"
+        }
+      },
+        {
+          "id": "s1-date",
+          "type": "text",
+          "content": "October 27, 2025",
+          "x": 100,
+          "y": 560,
+          "w": 800,
+          "h": 50,
+          "zIndex": 50,
+          "opacity": 1.0,
+          "maxWidth": 800,
+          "wordWrap": "break-word",
+          "lineClamp": 1,
+          "responsive": {
+            "short": {"fontSizeMultiplier": 1.0},
+            "medium": {"fontSizeMultiplier": 1.0},
+            "long": {"fontSizeMultiplier": 1.0}
+          },
+          "layout": {
+            "gridPosition": "middle-left",
+            "spacing": {"top": 20, "right": 20, "bottom": 20, "left": 50},
+            "alignment": "left"
+          },
+          "visibility": {
+            "minFontSize": "24pt",
+            "contrastRatio": 5.1,
+            "textShadow": null
+          },
+          "validation": {
+            "layoutError": null,
+            "readabilityScore": 0.95
+          },
+          "styling": {
+            "fontFamily": "Inter, Arial, sans-serif",
+            "fontSize": "24pt",
+            "color": "#5A6878"
           }
+        }
         ]
       },
       {
